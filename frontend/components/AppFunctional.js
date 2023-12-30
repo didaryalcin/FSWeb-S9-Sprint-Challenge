@@ -97,4 +97,40 @@ export default function AppFunctional(props) {
           <div
             key={idx}
             className={`square${idx === initialIndex ? " active" : ""}`}
-       
+            >
+            {idx === initialIndex ? "B" : null}
+          </div>
+        ))}
+      </div>
+      <div className="info">
+        <h3 id="message">{message}</h3>
+      </div>
+      <div id="keypad">
+        <button id="left" onClick={left}>
+          SOL
+        </button>
+        <button id="up" onClick={up}>
+          YUKARI
+        </button>
+        <button id="right" onClick={right}>
+          SAĞ
+        </button>
+        <button id="down" onClick={down}>
+          AŞAĞI
+        </button>
+        <button id="reset" onClick={reset}>
+          reset
+        </button>
+      </div>
+      <form onSubmit={onSubmit}>
+        <input
+          id="email"
+          type="email"
+          placeholder="email girin"
+          onChange={onChange}
+        ></input>
+        <input id="submit" type="submit"></input>
+      </form>
+    </div>
+  );
+}
