@@ -97,7 +97,7 @@ export default function AppFunctional(props) {
           <div
             key={idx}
             className={`square${idx === initialIndex ? " active" : ""}`}
-            >
+          >
             {idx === initialIndex ? "B" : null}
           </div>
         ))}
